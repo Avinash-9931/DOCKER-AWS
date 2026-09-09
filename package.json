@@ -1,0 +1,21 @@
+{
+  "name": "docker-aws-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix Frontend/vite-project run dev",
+    "dev:frontend": "npm --prefix Frontend/vite-project run dev",
+    "dev:Frontend": "npm --prefix Frontend/vite-project run dev",
+    "dev:backend": "npm --prefix Backend run dev",
+    "dev:Backend": "npm --prefix Backend run dev",
+    "dev:all": "npm run dev:backend & npm run dev:frontend",
+    "build": "npm --prefix Frontend/vite-project run build",
+    "build:frontend": "npm --prefix Frontend/vite-project run build"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "monaco": "^1.201704190613.0",
+    "y-monaco": "^0.1.6",
+    "y-socket.io": "^1.1.3",
+    "yjs": "^13.6.32"
+  }
+}
