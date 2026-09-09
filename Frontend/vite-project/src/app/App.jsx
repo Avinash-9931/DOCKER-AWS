@@ -32,7 +32,8 @@ function App() {
   useEffect(() => {
     if (!username || !editor) return
 
-    const provider = new SocketIOProvider("http://localhost:3000", "monaco", ydoc, {
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000"
+    const provider = new SocketIOProvider(backendUrl, "monaco", ydoc, {
       autoConnect: true,
     })
 
