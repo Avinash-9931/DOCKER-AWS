@@ -2,13 +2,7 @@
   "name": "docker-aws-root",
   "private": true,
   "scripts": {
-    "dev": "npm --prefix Frontend/vite-project run dev",
-    "dev:frontend": "npm --prefix Frontend/vite-project run dev",
-    "dev:Frontend": "npm --prefix Frontend/vite-project run dev",
-    "dev:backend": "npm --prefix Backend run dev",
-    "dev:Backend": "npm --prefix Backend run dev",
-    "dev:all": "npm run dev:backend & npm run dev:frontend",
-    "build": "npm --prefix Frontend/vite-project run build",
-    "build:frontend": "npm --prefix Frontend/vite-project run build"
+    "dev": "if [ -d 'Frontend/vite-project' ]; then cd Frontend/vite-project && npm run dev; else npm run dev; fi",
+    "build": "if [ -d 'Frontend/vite-project' ]; then cd Frontend/vite-project && npm run build; else npm run build; fi"
   }
 }

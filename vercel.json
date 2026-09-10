@@ -1,6 +1,6 @@
 {
-  "installCommand": "npm --prefix Frontend/vite-project install",
-  "buildCommand": "npm --prefix Frontend/vite-project run build",
+  "installCommand": "if [ -d 'Frontend/vite-project' ]; then cd Frontend/vite-project && npm install; else npm install; fi",
+  "buildCommand": "if [ -d 'Frontend/vite-project' ]; then cd Frontend/vite-project && npm run build; else npm run build; fi",
   "outputDirectory": "Frontend/vite-project/dist",
   "framework": "vite",
   "rewrites": [
